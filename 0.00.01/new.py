@@ -13,7 +13,7 @@ def new_player():
                     if math1 == False:
                         print('error not a digit')
             else:
-                
+
         age()
     info_get()
 new_player()
