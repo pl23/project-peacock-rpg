@@ -3,15 +3,18 @@ def new_player():
         def name ():
             import os
             pc_user_name = os.login() 
-            input1 = input ('do you whant ' + pc_user_name + ' as your name y/n:').upper
-            if input1 == 'Y' or input1 == 'YES':
-
-            elif input1 == 'N' or input1 == 'NO':
-                
-            else:
-                print ('error')
-            def get_input ():
-                
+            def name_chek ():
+                input1 = input ('do you whant ' + pc_user_name + ' as your name y/n:').upper
+                if input1 == 'Y' or input1 == 'YES':
+                    player_name = pc_user_name
+ 
+                elif input1 == 'N' or input1 == 'NO':
+                    player_name = input ('what is your name?')
+                    name_chek
+                else:
+                    print ('error')
+                    player_name = input ('what is your name?')
+            print ('hello ' + player_name + ' !')    
         def age():    
             input1 = input ('how old are you :')
             math1 = input1.isdigit()   
