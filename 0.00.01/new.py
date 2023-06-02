@@ -1,6 +1,9 @@
 def new_player():
     def info_get ():
         def name ():
+            import os
+            pc_user_name = os.login() 
+
         def age():    
             input1 = input ('how old are you :')
             math1 = input1.isdigit()   
