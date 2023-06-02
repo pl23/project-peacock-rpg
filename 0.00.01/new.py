@@ -1,7 +1,6 @@
 def new_player():
     def info_get ():
         def name ():
-            
         def age():    
             input1 = input ('how old are you :')
             math1 = input1.isdigit()   
