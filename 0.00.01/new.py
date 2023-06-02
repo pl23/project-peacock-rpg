@@ -32,4 +32,3 @@ def new_player():
 
         age()
     info_get()
-new_player()
