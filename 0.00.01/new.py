@@ -3,6 +3,7 @@ def new_player():
         def name ():
             import os
             pc_user_name = os.login() 
+            
 
         def age():    
             input1 = input ('how old are you :')
