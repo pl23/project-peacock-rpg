@@ -14,6 +14,7 @@ def new_player():
                 else:
                     print ('error')
                     player_name = input ('what is your name?')
+                    name_chek
             print ('hello ' + player_name + ' !')    
         def age():    
             input1 = input ('how old are you :')
