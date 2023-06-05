@@ -1,13 +1,9 @@
-# main.py
-
 def display_main_menu():
-    menu = """
-=== Main Menu ===
-1. Load Game
-2. New Game
-3. Exit
-"""
-    print(menu)
+    print("=== Main Menu ===")
+    print("1. Load Game")
+    print("2. New Game")
+    print("3. Exit")
+
 
 def main():
     while True:
@@ -25,23 +21,16 @@ def main():
 
     print("Exiting the game.")
 
+
+def load_game():
+    # Implement load game functionality
+    pass
+
+
+def new_game():
+    # Implement new game functionality
+    pass
+
+
 if __name__ == "__main__":
     main()
-
-
-def initialize_game():
-    # Initialize the game here
-    print("Game initialized")
-
-def show_main_menu():
-    # Display the main menu options and handle user input
-    print("Main menu displayed")
-
-def start_game():
-    # Start the game and execute the main game loop
-    print("Game started")
-
-if __name__ == "__main__":
-    initialize_game()
-    show_main_menu()
-    start_game()
