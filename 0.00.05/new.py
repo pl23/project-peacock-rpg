@@ -88,7 +88,7 @@ def data_gen(player_name, age1, player_gender):
 
         },'player_spals':{
             'spals_unlock':{},'spals_equped':{}
-        },'chech_ponts':{
+        },'check_ponts':{
 
         }
     }
