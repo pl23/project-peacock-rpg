@@ -97,7 +97,8 @@ def data_gen(player_name, age1,player_gender,tutorial):
         'player_info': {
             'player_name': player_name,
             'player_age': age1,
-            'player_gender': player_gender
+            'player_gender': player_gender,
+            'Player_location':None
         },'player_stats':{
 
         },'player_invtory':{
