@@ -9,7 +9,7 @@ def os_get_name():
         name_confrom1 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
         if name_confrom1 == 'Y' or name_confrom1 == 'YES':
             player_name = os_name
-            age(player_name)
+            return(player_name)
         elif name_confrom1 == 'N' or name_confrom1 == 'NO':
             os_get_name()
         else:
@@ -29,7 +29,7 @@ def get_name():
         name_confrom1 = input('Are you sure you want ' + input_name + ' as your name? (y/n): ').upper()
         if name_confrom1 == 'Y' or name_confrom1 == 'YES':
             player_name = input_name
-            age(player_name)
+            return(player_name)
         elif name_confrom1 == 'N' or name_confrom1 == 'NO':
             os_get_name()
         else:
