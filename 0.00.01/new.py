@@ -1,7 +1,8 @@
+import os
 def new_player():
     def info_get ():
         def name ():
-            pc_user_name = os.login() 
+            pc_user_name = os.getlogin() 
             def name_chek_os ():
                 input1 = input ('do you whant ' + pc_user_name + ' as your name y/n:').upper
                 if input1 == 'Y' or input1 == 'YES':
@@ -38,5 +39,5 @@ def new_player():
                         print('error not a digit')
             else:
 
-        name ()
+        name()
     info_get()

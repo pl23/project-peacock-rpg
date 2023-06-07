@@ -14,4 +14,4 @@ def get_input ():
     if input1 == 1:
         import new
         new.new_player
-        
+get_input()
