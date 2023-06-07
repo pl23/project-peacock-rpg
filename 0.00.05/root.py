@@ -15,8 +15,4 @@ def get_input ():
 def new_game():
     import new as new
     new.get_name()
-    
-    import chapter_1 as chapter_1
-    chapter_1.load_json()
-
 
