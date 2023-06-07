@@ -4,6 +4,7 @@ import json
 def get_name():
     #os_name = os.getlogin()
     os_name = "gabe"
+    #note this place holder untel i can get os.getlogin to work
     input1 = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
     if input1 == 'Y' or input1 == 'YES':
         input2 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
@@ -85,9 +86,11 @@ def data_gen(player_name, age1, player_gender):
     }
     data_dump(data)
 
-
 def data_dump(data):
-    file_path = 'data/player_' + data['player_info']['player_name'] + '_save.json'
+    directory = '0.00.05/data/'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    file_path = directory + 'player_' + data['player_info']['player_name'] + '_save.json'
     with open(file_path, 'w') as file:
         json.dump(data, file)
 
