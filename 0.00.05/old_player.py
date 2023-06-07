@@ -1,2 +1,2 @@
-def Scan_directory():
+def main():
     print ('not coded yet')

@@ -1,8 +1,9 @@
 import getpass
 import json
+class main:
+    
+def main(): 
 
-
-def main():
 
 
 

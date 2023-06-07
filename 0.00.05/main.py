@@ -17,11 +17,11 @@ def get_input ():
 
 def new_game():
     import new_player
-    new_player.get_name()
+    new_player.main()
 
 def lode_game():
     import old_player
-    old_player.Scan_directory()
+    old_player.main()
 
 
 get_input()
