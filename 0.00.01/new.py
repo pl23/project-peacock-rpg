@@ -1,7 +1,9 @@
 import os
+import json
 
 def get_name():
-    os_name = os.getlogin()
+    #os_name = os.getlogin()
+    os_name = "gabe"
     input1 = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
     if input1 == 'Y' or input1 == 'YES':
         input2 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
@@ -54,7 +56,7 @@ def age(player_name):
         age(player_name)
 
 def gender(player_name, age1):
-    input1 = input('What is your gender? ')
+    input1 = input("What is your gender?['male', 'female', 'other'] ")
     if input1.lower() in ['male', 'female', 'other']:
         player_gender = input1.lower()
         input2 = input('You entered ' + player_gender + '. Is that correct? (y/n): ').upper()
@@ -63,7 +65,7 @@ def gender(player_name, age1):
             print('Player name:', player_name)
             print('Player age:', age1)
             print('Player gender:', player_gender)
-            data_dump(player_name, age1, player_gender)
+            data_gen(player_name, age1,player_gender)
         elif input2 == 'N' or input2 == 'NO':
             gender(player_name, age1)
         else:
@@ -73,8 +75,20 @@ def gender(player_name, age1):
         print('Invalid input. Please enter a valid gender (male, female, or other).')
         gender(player_name, age1)
 
-def data_dump(player_name, age1, player_gender):
-    # Perform the necessary data dump or save the player's information to a file
-    print('Data dump completed.')
+def data_gen(player_name, age1, player_gender):
+    data = {
+        'player_info': {
+            'player_name': player_name,
+            'player_age': age1,
+            'player_gender': player_gender
+        }
+    }
+    return data
 
 
+def data_dump(data):
+    file_path = 'data/player_' + data['player_info']['player_name'] + '_save.json'
+    with open(file_path, 'w') as file:
+        json.dump(data, file)
+
+get_name()
