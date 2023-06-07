@@ -82,9 +82,21 @@ def data_gen(player_name, age1, player_gender):
             'player_name': player_name,
             'player_age': age1,
             'player_gender': player_gender
+        },'player_stats':{
+
+        },'player_invtory':{
+
+        },'player_spals':{
+            'spals_unlock':{},'spals_equped':{}
+        },'chech_ponts':{
+
         }
     }
     data_dump(data)
+
+
+
+
 
 def data_dump(data):
     print ('saving')
@@ -95,4 +107,3 @@ def data_dump(data):
     with open(file_path, 'w') as file:
         json.dump(data, file)
     print ('saving conpleat')
-get_name()
