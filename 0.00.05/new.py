@@ -87,10 +87,12 @@ def data_gen(player_name, age1, player_gender):
     data_dump(data)
 
 def data_dump(data):
+    print ('saving')
     directory = '0.00.05/data/'
     if not os.path.exists(directory):
         os.makedirs(directory)
     file_path = directory + 'player_' + data['player_info']['player_name'] + '_save.json'
     with open(file_path, 'w') as file:
         json.dump(data, file)
-
+    print ('saving conpleat')
+get_name()
