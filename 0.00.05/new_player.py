@@ -23,7 +23,7 @@ def os_get_name():
         os_get_name()
 
 def get_name():
-    input_name = input
+    input_name = input('what is name')
     name_ask = input('Do you want ' + input_name + ' as your name? (y/n): ').upper()
     if name_ask == 'Y' or name_ask == 'YES':
         name_confrom1 = input('Are you sure you want ' + input_name + ' as your name? (y/n): ').upper()
