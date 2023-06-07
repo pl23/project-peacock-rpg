@@ -13,6 +13,8 @@ def get_input ():
         print ('not coded yet')
 
 def new_game():
-    import new as new
-    new.get_name()
+    import new_player
+    new_player.get_name()
 
+def lode_game():
+    
