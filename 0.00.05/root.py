@@ -1,3 +1,5 @@
+
+
 def get_input ():
     input ('project-peacock-rpg \n press enter:')
     input1 = input ('1)new game \n2)lode game \netc:')
@@ -10,7 +12,8 @@ def get_input ():
     if input1 == 1:
         new_game()
     elif input1 == 2:
-        print ('not coded yet')
+        lode_game()
+
 
 def new_game():
     import new_player
@@ -19,3 +22,6 @@ def new_game():
 def lode_game():
     import old_player
     old_player.Scan_directory()
+
+
+get_input()
