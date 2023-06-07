@@ -15,7 +15,7 @@ def seen_T(data):
 def seen_1(data):
 
 #Dictionary location tracker code goes here
-
+    
     input('???: character dialogue goes here[press [enter]]')
     input('???: character dialogue goes here[press [enter]]')
     input('???: character dialogue goes here[press [enter]]')
