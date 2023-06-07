@@ -17,4 +17,5 @@ def new_game():
     new_player.get_name()
 
 def lode_game():
-    
+    import old_player
+    old_player.Scan_directory()

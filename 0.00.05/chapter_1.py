@@ -6,12 +6,18 @@ def load_json(selected_Save):
     return data
 
 def seen_T(data):
-    if data [''] == True:
+    if data["check_ponts"]["tutorial"] == True:
         print ('not coded yet ')
 
 
     seen_1(data)
     
 def seen_1(data):
-    input('')
- 
+
+#Dictionary location tracker code goes here
+
+    input('???: character dialogue goes here[press [enter]]')
+    input('???: character dialogue goes here[press [enter]]')
+    input('???: character dialogue goes here[press [enter]]')
+    input('???: character dialogue goes here[press [enter]]')
+    input('???: character dialogue goes here[press [enter]]')
