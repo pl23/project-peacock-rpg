@@ -94,10 +94,6 @@ def data_gen(player_name, age1, player_gender):
     }
     data_dump(data)
 
-
-
-
-
 def data_dump(data):
     print ('saving')
     directory = '0.00.05/data/'
