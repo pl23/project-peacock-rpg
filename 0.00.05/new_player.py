@@ -16,7 +16,7 @@ def os_get_name():
             print('Invalid input. Please enter "y" or "n".')
         os_get_name()
     elif os_name_ask == 'N' or os_name_ask == 'NO':
-        os_get_name()
+        get_name()
     
     else:
         print('Invalid input. Please enter "y" or "n".')
@@ -40,7 +40,7 @@ def get_name():
     
     else:
         print('Invalid input. Please enter "y" or "n".')
-        get_name()
+        os_get_name()
 
 
 
@@ -127,3 +127,4 @@ def data_dump(data):
     chapter_1.load_json(selected_Save)
 
     
+os_get_name()
