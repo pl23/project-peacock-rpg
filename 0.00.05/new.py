@@ -4,7 +4,7 @@ import json
 def get_name():
     #os_name = os.getlogin()
     os_name = "gabe"
-    #note this place holder untel i can get os.getlogin to work
+    #note this is a place holder untel i can get os.getlogin to work
     input1 = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
     if input1 == 'Y' or input1 == 'YES':
         input2 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
@@ -62,11 +62,7 @@ def gender(player_name, age1):
         player_gender = input1.lower()
         input2 = input('You entered ' + player_gender + '. Is that correct? (y/n): ').upper()
         if input2 == 'Y' or input2 == 'YES':
-            # Proceed with the next steps or data handling based on the player's age, gender, and name
-            print('Player name:', player_name)
-            print('Player age:', age1)
-            print('Player gender:', player_gender)
-            data_gen(player_name, age1,player_gender)
+            tutorial_F(player_name, age1,player_gender)
         elif input2 == 'N' or input2 == 'NO':
             gender(player_name, age1)
         else:
@@ -76,7 +72,24 @@ def gender(player_name, age1):
         print('Invalid input. Please enter a valid gender (male, female, or other).')
         gender(player_name, age1)
 
-def data_gen(player_name, age1, player_gender):
+def tutorial_F (player_name, age1,player_gender):
+    input1 = input('Do you need a tutorial[y/n]').upper()
+    if input1 == 'Y' or input1 == 'YES':
+        input2 = input ('are you shore about this[y/n]').upper()
+        if input2 == 'Y' or input2 == 'Yes':
+            tutorial = True
+            data_gen(player_name, age1,player_gender,tutorial)
+        else:
+            tutorial_F(player_name, age1,player_gender)   
+    elif input1 == 'N' or input1 == 'No':
+        input2 = input ('are you shore about this[y/n]').upper()
+        if input2 == 'Y' or input2 == 'Yes':
+            tutorial = False
+            data_gen(player_name, age1,player_gender,tutorial)
+        else:
+            tutorial_F(player_name, age1,player_gender)    
+
+def data_gen(player_name, age1,player_gender,tutorial):
     data = {
         'player_info': {
             'player_name': player_name,
@@ -88,18 +101,18 @@ def data_gen(player_name, age1, player_gender):
 
         },'player_spals':{
             'spals_unlock':{},'spals_equped':{}
-        },'check_ponts':{#billian only
-
+        },'check_ponts':{
+            'tutorial': tutorial
         }
     }
     data_dump(data)
 
 def data_dump(data):
     print ('saving')
-    directory = '0.00.05/data/'
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-    file_path = directory + 'player_' + data['player_info']['player_name'] + '_save.json'
+    file_path = '0.00.05/data/' + 'player_' + data['player_info']['player_name'] + '_save.json'
     with open(file_path, 'w') as file:
         json.dump(data, file)
     print ('saving conpleat')
+    import chapter_1 as chapter_1
+    selected_Save = '0.00.05/data/' + 'player_' + data['player_info']['player_name'] + '_save.json'
+    chapter_1.load_json(selected_Save)
