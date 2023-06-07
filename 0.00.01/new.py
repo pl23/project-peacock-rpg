@@ -83,7 +83,7 @@ def data_gen(player_name, age1, player_gender):
             'player_gender': player_gender
         }
     }
-    return data
+    data_dump(data)
 
 
 def data_dump(data):
