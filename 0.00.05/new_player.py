@@ -126,5 +126,5 @@ def data_dump(data):
     selected_Save = '0.00.05/data/' + 'player_' + data['player_info']['player_name'] + '_save.json'
     chapter_1.load_json(selected_Save)
 
-    
+
 os_get_name()
