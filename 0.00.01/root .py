@@ -13,5 +13,5 @@ def get_input ():
         input1 = int(input1)
     if input1 == 1:
         import new
-        new.new_player
+        new.get_name
 get_input()
