@@ -1,3 +1,7 @@
+import os
+import sys
+import json
+
 def get_input ():
     input ('project-peacock-rpg \n press enter:')
     input1 = input ('1)new game \netc')

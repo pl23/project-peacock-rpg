@@ -1,7 +1,6 @@
 def new_player():
     def info_get ():
         def name ():
-            import os
             pc_user_name = os.login() 
             def name_chek_os ():
                 input1 = input ('do you whant ' + pc_user_name + ' as your name y/n:').upper
@@ -10,7 +9,7 @@ def new_player():
  
                 elif input1 == 'N' or input1 == 'NO':
                     player_name = input ('what is your name?')
-                    name_chek
+                    name_chek()
             def name_chek ():
                 input1 = input ('do you whant ' + pc_user_name + ' as your name y/n:').upper
                 if input1 == 'Y' or input1 == 'YES':
@@ -18,13 +17,13 @@ def new_player():
  
                 elif input1 == 'N' or input1 == 'NO':
                     player_name = input ('what is your name?')
-                    name_chek
+                    name_chek()
 
                 else:
                     print ('error')
                     player_name = input ('what is your name?')
-                    name_chek
-            print ('hello ' + player_name + ' !')    
+                    name_chek()
+                print ('hello ' + player_name + ' !')    
         def age():    
             input1 = input ('how old are you :')
             math1 = input1.isdigit()   
@@ -39,5 +38,5 @@ def new_player():
                         print('error not a digit')
             else:
 
-        age()
+        name ()
     info_get()
