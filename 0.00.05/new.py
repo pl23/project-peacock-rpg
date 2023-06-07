@@ -94,4 +94,3 @@ def data_dump(data):
     with open(file_path, 'w') as file:
         json.dump(data, file)
 
-get_name()
