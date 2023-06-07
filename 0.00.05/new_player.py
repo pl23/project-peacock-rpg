@@ -1,6 +1,7 @@
 import os
 import json
 
+
 def get_name():
     #os_name = os.getlogin()
     os_name = "gabe"
@@ -40,6 +41,7 @@ def get_name():
         print('Invalid input. Please enter "y" or "n".')
         get_name()
 
+
 def age(player_name):
     input1 = input('How old are you? ')
     if input1.isdigit():
@@ -55,6 +57,7 @@ def age(player_name):
     else:
         print('Invalid input. Please enter a valid age (numeric value).')
         age(player_name)
+
 
 def gender(player_name, age1):
     input1 = input("What is your gender?['male', 'female', 'other'] ")
@@ -72,6 +75,7 @@ def gender(player_name, age1):
         print('Invalid input. Please enter a valid gender (male, female, or other).')
         gender(player_name, age1)
 
+
 def tutorial_F (player_name, age1,player_gender):
     input1 = input('Do you need a tutorial[y/n]').upper()
     if input1 == 'Y' or input1 == 'YES':
@@ -88,6 +92,7 @@ def tutorial_F (player_name, age1,player_gender):
             data_gen(player_name, age1,player_gender,tutorial)
         else:
             tutorial_F(player_name, age1,player_gender)    
+
 
 def data_gen(player_name, age1,player_gender,tutorial):
     data = {
@@ -107,6 +112,7 @@ def data_gen(player_name, age1,player_gender,tutorial):
     }
     data_dump(data)
 
+
 def data_dump(data):
     print ('saving')
     file_path = '0.00.05/data/' + 'player_' + data['player_info']['player_name'] + '_save.json'
@@ -116,3 +122,5 @@ def data_dump(data):
     import chapter_1 as chapter_1
     selected_Save = '0.00.05/data/' + 'player_' + data['player_info']['player_name'] + '_save.json'
     chapter_1.load_json(selected_Save)
+
+    
