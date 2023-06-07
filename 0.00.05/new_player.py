@@ -2,42 +2,46 @@ import getpass
 import json
 
 
-def get_name():
+def os_get_name():
     os_name = getpass.getuser()
-    input1 = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
-    if input1 == 'Y' or input1 == 'YES':
-        input2 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
-        if input2 == 'Y' or input2 == 'YES':
+    os_name_ask = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
+    if os_name_ask == 'Y' or os_name_ask == 'YES':
+        name_confrom1 = input('Are you sure you want ' + os_name + ' as your name? (y/n): ').upper()
+        if name_confrom1 == 'Y' or name_confrom1 == 'YES':
             player_name = os_name
             age(player_name)
-        elif input2 == 'N' or input2 == 'NO':
-            input3 = input('What is your name? ')
-            input4 = input('Are you sure you want ' + input3 + ' as your name? (y/n): ').upper()
-            if input4 == 'Y' or input4 == 'YES':
-                player_name = input3
-                age(player_name)
-            elif input4 == 'N' or input4 == 'NO':
-                get_name()
-            else:
-                print('Invalid input. Please enter "y" or "n".')
-                get_name()
+        elif name_confrom1 == 'N' or name_confrom1 == 'NO':
+            os_get_name()
         else:
             print('Invalid input. Please enter "y" or "n".')
-            get_name()
-    elif input1 == 'N' or input1 == 'NO':
-        input5 = input('What is your name? ')
-        input6 = input('Are you sure you want ' + input5 + ' as your name? (y/n): ').upper()
-        if input6 == 'Y' or input6 == 'YES':
-            player_name = input5
+        os_get_name()
+    elif os_name_ask == 'N' or os_name_ask == 'NO':
+    os_get_name()
+    
+    else:
+        print('Invalid input. Please enter "y" or "n".')
+        os_get_name()
+
+def get_name():
+    input_name = input
+    name_ask = input('Do you want ' + input_name + ' as your name? (y/n): ').upper()
+    if name_ask == 'Y' or name_ask == 'YES':
+        name_confrom1 = input('Are you sure you want ' + input_name + ' as your name? (y/n): ').upper()
+        if name_confrom1 == 'Y' or name_confrom1 == 'YES':
+            player_name = input_name
             age(player_name)
-        elif input6 == 'N' or input6 == 'NO':
-            get_name()
+        elif name_confrom1 == 'N' or name_confrom1 == 'NO':
+            os_get_name()
         else:
             print('Invalid input. Please enter "y" or "n".')
-            get_name()
+        get_name()
+    elif name_ask == 'N' or name_ask == 'NO':
+    os_get_name()
+    
     else:
         print('Invalid input. Please enter "y" or "n".')
         get_name()
+
 
 
 def age(player_name):
