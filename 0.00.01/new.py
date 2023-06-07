@@ -40,10 +40,10 @@ def get_name():
 def age(player_name):
     input1 = input('How old are you? ')
     if input1.isdigit():
-        age = int(input1)
-        input2 = input('You entered ' + str(age) + '. Is that correct? (y/n): ').upper()
+        age1 = int(input1)
+        input2 = input('You entered ' + str(age1) + '. Is that correct? (y/n): ').upper()
         if input2 == 'Y' or input2 == 'YES':
-            gender(player_name, age)
+            gender(player_name, age1)
         elif input2 == 'N' or input2 == 'NO':
             age(player_name)
         else:
@@ -53,7 +53,7 @@ def age(player_name):
         print('Invalid input. Please enter a valid age (numeric value).')
         age(player_name)
 
-def gender(player_name, age):
+def gender(player_name, age1):
     input1 = input('What is your gender? ')
     if input1.lower() in ['male', 'female', 'other']:
         player_gender = input1.lower()
@@ -61,19 +61,19 @@ def gender(player_name, age):
         if input2 == 'Y' or input2 == 'YES':
             # Proceed with the next steps or data handling based on the player's age, gender, and name
             print('Player name:', player_name)
-            print('Player age:', age)
+            print('Player age:', age1)
             print('Player gender:', player_gender)
-            data_dump(player_name, age, player_gender)
+            data_dump(player_name, age1, player_gender)
         elif input2 == 'N' or input2 == 'NO':
-            gender(player_name, age)
+            gender(player_name, age1)
         else:
             print('Invalid input. Please enter "y" or "n".')
-            gender(player_name, age)
+            gender(player_name, age1)
     else:
         print('Invalid input. Please enter a valid gender (male, female, or other).')
-        gender(player_name, age)
+        gender(player_name, age1)
 
-def data_dump(player_name, age, gender):
+def data_dump(player_name, age1, player_gender):
     # Perform the necessary data dump or save the player's information to a file
     print('Data dump completed.')
 
