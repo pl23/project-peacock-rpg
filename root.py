@@ -1,5 +1,3 @@
-
-
 def get_input ():
     input ('project-peacock-rpg \n press enter:')
     input1 = input ('1)new game \n2)lode game \netc:')
@@ -14,7 +12,7 @@ def get_input ():
     elif input1 == 2:
         print ('not coded yet')
 
-def new_game():   
+def new_game():
     import new
     new.get_name()
     
