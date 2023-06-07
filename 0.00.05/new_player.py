@@ -1,10 +1,10 @@
-import os
+import getpass
 import json
 
 
 def get_name():
-    #os_name = os.getlogin()
-    os_name = "gabe"
+    os_name = getpass.getuser()
+    #os_name = "gabe"
     #note this is a place holder untel i can get [os_name = os.getlogin()] to work
     input1 = input('Do you want ' + os_name + ' as your name? (y/n): ').upper()
     if input1 == 'Y' or input1 == 'YES':
