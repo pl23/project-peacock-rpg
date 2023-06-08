@@ -1,0 +1,4 @@
+[
+    {"name": "potion", "main_type": "consumable", "sub_type": null, "effect": "roll 2xd4 for health recovery", "weight": 0.25, "count": 1},
+    {"name": "antidote", "main_type": "consumable", "sub_type": null, "effect": "immediately poison recovery", "weight": 0.25, "count": 1}
+]
