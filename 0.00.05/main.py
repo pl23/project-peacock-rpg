@@ -15,10 +15,11 @@ def get_input ():
         print ('not coded yet')
 
 def new_game():   
-    import new
-    new.get_name()
+    import NewPlayer
+    NewPlayer.get_name()
     
     import chapter_1
     chapter_1.load_json()
 
+get_input()
 
