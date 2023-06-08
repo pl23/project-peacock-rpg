@@ -45,3 +45,4 @@ class Player(Character):
         super().__init__(name, age, gender, stats, inventory, spells, checkpoint, location)
 
         self.total_weight = sum([i.weight*i.count for i in self.inventory])
+        self.stats =['exp'] #Experience /  level  # level cap is 20 / exp 3550
