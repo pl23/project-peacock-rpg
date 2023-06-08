@@ -1,27 +1,19 @@
+from Characters.characters import Player, Enemy, NPC, Boss
+from Maps.Map_1 import Map
+from GameManager import GameManager
+from settings import Settings
+
+class Main:
+
+    def __init__(self):
+        self.player = Player()
+        self.map = Map()
+        self.settings = Settings()
+        self.GameManager = GameManager()
+        self.GameManager.run()   
+        pass
 
 
-def get_input ():
-    input ('project-peacock-rpg \n press enter:')
-    input1 = input ('1)new game \n2)lode game \netc:')
-    check = input1.isdigit()
-    if check == False:
-        print ('invald input')
-        get_input()
-    else:
-        input1 = int(input1)
-    if input1 == 1:
-        new_game()
-    elif input1 == 2:
-        lode_game()
+if __name__ == "__main__":
+    main = Main()
 
-
-def new_game():
-    import new_player
-    new_player.main()
-
-def lode_game():
-    import old_player
-    old_player.main()
-
-
-get_input()
