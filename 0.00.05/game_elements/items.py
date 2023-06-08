@@ -10,9 +10,10 @@ class Item:
         self.weight = weight
 
 
-class Weapon(Item):
-    def __init__(self, name, main_type, sub_type, effect, range, hit, damage):
-        super().__init__(name, main_type, sub_type, effect)
+class Weapon():
+    def __init__(self):
+        super().__init__()
         self.range = range
         self.hit = hit
         self.damage = damage
+
