@@ -13,3 +13,10 @@ class caracter:
     self.
     self.
     self.
+
+
+class npc:
+
+
+class playre:
+
