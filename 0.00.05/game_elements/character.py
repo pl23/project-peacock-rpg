@@ -1,6 +1,7 @@
+
 class caracter:
-    __init__(self)
-    self.name :{'name':name}
+    __init__(self,data)
+    self.name : {'name':name}
     self.
     self.
     self.
