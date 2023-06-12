@@ -54,31 +54,3 @@ def roll(die=None, sided=None, dice_effect=None, display_result=True, advantage=
         print(result)
 
     return result
-
-# Testing the roll function with direct values
-roll(2, 6)
-
-# Testing the roll function with '1d6' as the dice_effect
-roll(dice_effect='1d6')
-
-# Testing the roll function with advantage in the string
-roll(dice_effect='A1d6')
-
-# Testing the roll function with disadvantage in the string
-roll(dice_effect='D1d6')
-
-# Testing the roll function with separate die and sided values and advantage
-roll(die=1, sided=6, advantage=True)
-
-# Testing the roll function with separate die and sided values and disadvantage
-roll(die=1, sided=6, advantage=False)
-
-# Testing the roll function with all empty inputs (raises ValueError)
-try:
-    roll()
-except ValueError as e:
-    print(e)
-
-# Testing the roll function with display_result set to False
-result = roll(die=1, sided=20, display_result=False)
-print("The result is", result)  # Display the result separately
