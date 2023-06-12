@@ -52,20 +52,3 @@ def roll(die=None, sided=None, dice_effect=None, display_result=True, advantage=
 
     return result_with_proficiency
 
-# Testing the roll function with direct values and proficiency bonus
-roll(2, 6, proficiency_bonus=2)
-
-# Testing the roll function with '1d6' as the dice_effect and proficiency bonus
-roll(dice_effect='1d6', proficiency_bonus=-1)
-
-# Testing the roll function with advantage in the string and proficiency bonus
-roll(dice_effect='A1d6', proficiency_bonus=3)
-
-# Testing the roll function with disadvantage in the string and proficiency bonus
-roll(dice_effect='D1d6', proficiency_bonus=0)
-
-# Testing the roll function with separate die and sided values, advantage, and proficiency bonus
-roll(die=1, sided=6, advantage='A', proficiency_bonus=2)
-
-# Testing the roll function with separate die and sided values, disadvantage, and proficiency bonus
-roll(die=1, sided=6, advantage='D', proficiency_bonus=0)
