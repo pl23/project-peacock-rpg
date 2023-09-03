@@ -25,17 +25,17 @@ def split_dice_effect(dice_effect):
     else:
         die, sided = dice_effect.strip().split('d')  # Strip whitespace from dice_effect
         advantage = None
-
-    return int(die), int(sided), advantage
+    roll(int(die), int(sided), advantage)
+    return 
 
 def roll(die=None, sided=None, dice_effect=None, display_result=True, advantage=None, proficiency_bonus=0):
     if not die and not sided and not dice_effect:
-        raise ValueError("No input provided. Please specify die and sided values or dice_effect.")
+        raise ValueError("No input provided. Please specify die and sided values or dice_effect.")  
 
-    if dice_effect:
-        die, sided, advantage = split_dice_effect(dice_effect)
-    else:
-        advantage = advantage
+    #if dice_effect:
+        #die, sided, advantage = split_dice_effect(dice_effect)
+    #else:
+    #    advantage = advantage
 
     if die is None or sided is None:
         raise ValueError("Missing die or sided value.")
@@ -51,4 +51,18 @@ def roll(die=None, sided=None, dice_effect=None, display_result=True, advantage=
         print(result_with_proficiency)
 
     return result_with_proficiency
+
+def a ():
+    reply = input("roll dice?(eg:1d6).>")
+    split_dice_effect(reply)
+        
+        
+ 
+while True:
+    a()
+    reply = input("continue?[Yes/No]>").upper
+    if reply in ["Y","YES"]:
+        continue
+    elif reply in ["N","NO"]:
+        break
 
